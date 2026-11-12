@@ -59,9 +59,9 @@ The sector is **moderately fragmented**: mega-cap ecosystem providers (Microsoft
 
 ## 💻 Open-Source GitHub Projects
 
-*Self-hostable, open-source relational databases and collaborative table tools for teams prioritizing data sovereignty, on-premises compliance, and no per-user software licensing. Sorted by GitHub stars (descending).* 🌟
+*Self-hostable, open-source relational databases and collaborative table tools for teams prioritizing data sovereignty, on-premises compliance, and no per-user software licensing. Sorted by GitHub_Stars (descending).* 🌟
 
-| Project | Star Badge | Description | Primary Stack | License |
+| Project | Stars_Badge | Description | Primary Stack | License |
 |:---|:---|:---|:---|:---|
 | **[NocoDB](https://github.com/nocodb/nocodb)** | [![Stars](https://img.shields.io/github/stars/nocodb/nocodb?style=social&color=white)](https://github.com/nocodb/nocodb/stargazers) | Open-source Airtable alternative that turns any existing SQL database (PostgreSQL, MySQL, SQLite, SQL Server) into a smart collaborative spreadsheet with real-time sync, views, and REST APIs. | Node.js / Vue / TypeScript | AGPL-3.0 |
 | **[Directus](https://github.com/directus/directus)** | [![Stars](https://img.shields.io/github/stars/directus/directus?style=social&color=white)](https://github.com/directus/directus/stargazers) | Open-source data platform that wraps any SQL database with a real-time collaborative data studio, granular role-based permissions, automated REST & GraphQL APIs, and custom flows. | TypeScript / Vue / Node.js | BSL 1.1 / GPLv3 |
@@ -101,7 +101,7 @@ flowchart TD
 
 ## 🧭 How to Choose
 
-- 🎯 **Need an open-source Airtable alternative with maximum stars & SQL connectivity?** → [NocoDB](https://github.com/nocodb/nocodb) or [Directus](https://github.com/directus/directus).
+- 🎯 **Need an open-source Airtable alternative with maximum GitHub_Stars & SQL connectivity?** → [NocoDB](https://github.com/nocodb/nocodb) or [Directus](https://github.com/directus/directus).
 - 🚀 **Need genuine PostgreSQL performance with millions of rows?** → [Teable](https://github.com/teableio/teable).
 - 🐍 **Need Python formulas inside a spreadsheet-database hybrid?** → [Grist](https://github.com/gristlabs/grist-core).
 - 🧱 **Need an open-source visual web app builder connected to tables?** → [Baserow](https://github.com/bram2w/baserow).
@@ -117,7 +117,7 @@ Contributions are warmly welcome! 🙌 To add or update an entry:
 1. 🍴 Fork this repository.
 2. 📝 Add or update the platform in `README.md` following the standard table structure:
    - Include exact starting pricing and exact free tier limits.
-   - For open-source tools, include the official star badge format (`[![Stars](https://img.shields.io/github/stars/owner/repo?style=social&color=white)](https://github.com/owner/repo/stargazers)`).
+   - For open-source tools, include the official Stars_Badge format (`[![Stars](https://img.shields.io/github/stars/owner/repo?style=social&color=white)](https://github.com/owner/repo/stargazers)`).
 3. 🔢 Ensure the project is properly sorted according to the table guidelines.
 4. 🚀 Submit a pull request with a concise description of your changes.
 
