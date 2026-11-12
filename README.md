@@ -1,6 +1,6 @@
 # Awesome-Collaborative-Relational-Database-Tables
 
-# Top Collaborative Relational Database & Tables Ecosystem
+## Top Collaborative Relational Database & Tables Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on No-Code Databases, Real-Time Collaboration & Relational Data Workspaces*  
