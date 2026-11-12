@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#070a14" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#253352" stroke-width="0.8" opacity="0.3" />
+    </pattern>
+
+    <!-- Glow Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <radialGradient id="cyanOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="purpleOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-12px) rotate(1.5deg); }
+      }
+      @keyframes floatFast {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-16px) rotate(-2deg); }
+      }
+      @keyframes pulseBeam {
+        0%, 100% { opacity: 0.2; stroke-dashoffset: 0; }
+        50% { opacity: 0.8; stroke-dashoffset: -30; }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { transform: scale(1); opacity: 0.4; }
+        50% { transform: scale(1.15); opacity: 0.7; }
+      }
+      @keyframes flowData {
+        from { stroke-dashoffset: 120; }
+        to { stroke-dashoffset: 0; }
+      }
+      .ambient-glow-1 {
+        animation: pulseGlow 8s ease-in-out infinite;
+        transform-origin: 200px 150px;
+      }
+      .ambient-glow-2 {
+        animation: pulseGlow 10s ease-in-out infinite reverse;
+        transform-origin: 1000px 250px;
+      }
+      .table-card-left {
+        animation: floatSlow 7s ease-in-out infinite;
+        transform-origin: 120px 240px;
+      }
+      .table-card-right {
+        animation: floatFast 6s ease-in-out infinite;
+        transform-origin: 1060px 220px;
+      }
+      .stream-line {
+        stroke-dasharray: 8 6;
+        animation: flowData 3s linear infinite;
+      }
+      .title-text {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 42px;
+        letter-spacing: -0.5px;
+      }
+      .subtitle-text {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: 0.2px;
+        fill: #94a3b8;
+      }
+      .pill-text {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        fill: #e2e8f0;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGradient)"/>
+  <rect width="1200" height="420" rx="16" fill="url(#gridPattern)"/>
+
+  <!-- Dynamic Ambient Glowing Orbs in Background -->
+  <circle class="ambient-glow-1" cx="200" cy="140" r="180" fill="url(#cyanOrb)" pointer-events="none" />
+  <circle class="ambient-glow-2" cx="1020" cy="240" r="220" fill="url(#purpleOrb)" pointer-events="none" />
+
+  <!-- Animated Data Linking Streams in Background -->
+  <path class="stream-line" d="M 180 280 C 350 360, 850 360, 1020 280" fill="none" stroke="#6366f1" stroke-width="2" opacity="0.4" />
+  <path class="stream-line" d="M 220 180 C 400 80, 800 80, 980 180" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.35" style="animation-duration: 4s;" />
+
+  <!-- Floating Decorative Relational Table Card - LEFT SIDE -->
+  <g class="table-card-left" filter="url(#shadow)">
+    <rect x="50" y="140" width="160" height="170" rx="10" fill="#131b2e" stroke="#2a3c5a" stroke-width="1.5" />
+    <rect x="50" y="140" width="160" height="28" rx="10" fill="#1e293b" />
+    <rect x="50" y="158" width="160" height="10" fill="#1e293b" />
+    <circle cx="65" cy="154" r="4" fill="#ef4444" />
+    <circle cx="77" cy="154" r="4" fill="#eab308" />
+    <circle cx="89" cy="154" r="4" fill="#22c55e" />
+    <text x="105" y="158" font-family="system-ui" font-size="10" font-weight="bold" fill="#94a3b8">Bases / Tables</text>
+    
+    <!-- Table Rows -->
+    <line x1="50" y1="195" x2="210" y2="195" stroke="#25334d" stroke-width="1" />
+    <line x1="50" y1="225" x2="210" y2="225" stroke="#25334d" stroke-width="1" />
+    <line x1="50" y1="255" x2="210" y2="255" stroke="#25334d" stroke-width="1" />
+    <line x1="50" y1="285" x2="210" y2="285" stroke="#25334d" stroke-width="1" />
+    <line x1="110" y1="168" x2="110" y2="310" stroke="#25334d" stroke-width="1" />
+
+    <!-- Table Cells Simulated Data -->
+    <rect x="58" y="178" width="40" height="8" rx="3" fill="#38bdf8" opacity="0.8" />
+    <rect x="120" y="178" width="70" height="8" rx="3" fill="#818cf8" opacity="0.6" />
+    
+    <rect x="58" y="208" width="30" height="8" rx="3" fill="#34d399" opacity="0.7" />
+    <rect x="120" y="208" width="55" height="8" rx="3" fill="#64748b" opacity="0.5" />
+    
+    <rect x="58" y="238" width="45" height="8" rx="3" fill="#f472b6" opacity="0.7" />
+    <rect x="120" y="238" width="65" height="8" rx="3" fill="#64748b" opacity="0.5" />
+    
+    <rect x="58" y="268" width="35" height="8" rx="3" fill="#fbbf24" opacity="0.7" />
+    <rect x="120" y="268" width="45" height="8" rx="3" fill="#818cf8" opacity="0.6" />
+  </g>
+
+  <!-- Floating Decorative Relational Schema Card - RIGHT SIDE -->
+  <g class="table-card-right" filter="url(#shadow)">
+    <rect x="990" y="130" width="160" height="180" rx="10" fill="#131b2e" stroke="#3b4d6e" stroke-width="1.5" />
+    <rect x="990" y="130" width="160" height="28" rx="10" fill="#1e293b" />
+    <rect x="990" y="148" width="160" height="10" fill="#1e293b" />
+    <text x="1010" y="148" font-family="system-ui" font-size="11" font-weight="bold" fill="#38bdf8">1-to-N Relations</text>
+    <circle cx="1130" cy="144" r="5" fill="#10b981" />
+
+    <!-- Schema Fields -->
+    <rect x="1005" y="170" width="130" height="20" rx="4" fill="#1e2942" />
+    <circle cx="1015" cy="180" r="3" fill="#38bdf8" />
+    <text x="1025" y="184" font-family="monospace" font-size="10" fill="#cbd5e1">id [UUID]</text>
+
+    <rect x="1005" y="196" width="130" height="20" rx="4" fill="#1e2942" />
+    <circle cx="1015" cy="206" r="3" fill="#a855f7" />
+    <text x="1025" y="210" font-family="monospace" font-size="10" fill="#cbd5e1">record_name</text>
+
+    <rect x="1005" y="222" width="130" height="20" rx="4" fill="#1e2942" />
+    <circle cx="1015" cy="232" r="3" fill="#10b981" />
+    <text x="1025" y="236" font-family="monospace" font-size="10" fill="#cbd5e1">linked_items ↗</text>
+
+    <rect x="1005" y="248" width="130" height="20" rx="4" fill="#1e2942" />
+    <circle cx="1015" cy="258" r="3" fill="#f59e0b" />
+    <text x="1025" y="262" font-family="monospace" font-size="10" fill="#cbd5e1">sync_status</text>
+
+    <rect x="1005" y="274" width="130" height="24" rx="4" fill="#243354" stroke="#4f46e5" stroke-width="1" />
+    <text x="1020" y="290" font-family="system-ui" font-size="10" font-weight="bold" fill="#818cf8">⚡ Real-Time Sync</text>
+  </g>
+
+  <!-- FOREGROUND HERO CONTENT (Guaranteed on Top) -->
+  <g id="heroContent">
+    <!-- Top Pill / Badge -->
+    <g transform="translate(480, 50)">
+      <rect x="0" y="0" width="240" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+      <circle cx="16" cy="16" r="4" fill="#22c55e" />
+      <text x="30" y="21" class="pill-text">CURATED ECOSYSTEM • 2026</text>
+    </g>
+
+    <!-- Main Title with Gradient Fill -->
+    <text x="600" y="145" text-anchor="middle" class="title-text" fill="url(#primaryGrad)">
+      Collaborative Relational Tables
+    </text>
+
+    <!-- Subtitle -->
+    <text x="600" y="185" text-anchor="middle" class="subtitle-text">
+      The Ultimate Directory of No-Code Databases, Spreadsheet-Database Hybrids &amp; Airtable Alternatives
+    </text>
+
+    <!-- Category Highlights / Feature Pills in Foreground -->
+    <g transform="translate(240, 240)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="160" height="42" rx="21" fill="#111827" stroke="#38bdf8" stroke-width="1.2" />
+        <text x="80" y="26" text-anchor="middle" class="pill-text">📊 No-Code Databases</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(185, 0)">
+        <rect width="170" height="42" rx="21" fill="#111827" stroke="#818cf8" stroke-width="1.2" />
+        <text x="85" y="26" text-anchor="middle" class="pill-text">⚡ Real-Time Tables</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(375, 0)">
+        <rect width="175" height="42" rx="21" fill="#111827" stroke="#a855f7" stroke-width="1.2" />
+        <text x="87" y="26" text-anchor="middle" class="pill-text">🔗 Relational Workspaces</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(570, 0)">
+        <rect width="150" height="42" rx="21" fill="#111827" stroke="#2dd4bf" stroke-width="1.2" />
+        <text x="75" y="26" text-anchor="middle" class="pill-text">🔓 Self-Hosted OSS</text>
+      </g>
+    </g>
+
+    <!-- Sub-bar footer tagline -->
+    <g transform="translate(350, 320)">
+      <line x1="50" y1="10" x2="450" y2="10" stroke="#1e293b" stroke-width="1" />
+      <text x="250" y="32" text-anchor="middle" font-family="system-ui" font-size="13" font-weight="500" fill="#64748b">
+        Airtable • Notion • Coda • NocoDB • Directus • Teable • Baserow • Grist
+      </text>
+    </g>
+  </g>
+</svg>
